@@ -23,8 +23,9 @@ const server = createServer(app);
 let users = {};
 
 const wss = new WebSocketServer({ noServer: true });
-
+ 
 wss.on("connection", function(connection) {
+  
   console.log("User connected");
 
   //when server gets a message from a connected user
